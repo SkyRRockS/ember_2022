@@ -5,6 +5,7 @@ import {action} from '@ember/object';
 export default class Ex1Controller extends Controller {
   @tracked content = 'Texte par defaut';
   @tracked info = '';
+  statut = "Non modifié";
   max = 100;
 
   get size(){
@@ -21,7 +22,18 @@ export default class Ex1Controller extends Controller {
       return 'info';
   }
 
-
+  get modif(){
+    if(!this.content){
+      return 'Zone de texte vide';
+    }
+    if(this.content == "Texte par defaut"){
+      return 'Non modifié'
+    }
+    if(this.size > 0 ){
+      return 'Note modifiée';
+    }
+    return 'Vous avez attein le maximum de caractères';
+  }
 
   @action
   test(){

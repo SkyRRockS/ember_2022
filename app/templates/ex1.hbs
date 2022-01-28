@@ -1,9 +1,9 @@
 {{page-title "Ex1"}}
 <div class="card-body">
-  <Textarea class ="form-control" @value={{this.content}}/>
+  <Textarea maxlength = {{this.max}} class ="form-control" @value={{this.content}}/>
   <h2>{{this.content}}</h2>
-  <div class="alert alert-{{this.style}}">Nombre de charactère restant : {{this.size}}</div>
-  <h2>{{this.size}}</h2>
+  <div class="alert alert-info">Nombre de charactère restant : {{this.size}}</div>
+  <div class="alert alert-{{this.style}}">{{this.modif}}</div>
 </div>
 <div class="btn btn-primary">Enregistrer</div>
 <div {{action "test"}} class="btn btn-primary">Effacer</div>
