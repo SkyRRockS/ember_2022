@@ -37,6 +37,7 @@ export default class Ex1Controller extends Controller {
 
   @action
   test(){
+    if(this.content)
     this.content = '';
   }
 
