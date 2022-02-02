@@ -1,0 +1,10 @@
+{{page-title "Ex2"}}
+<ul>
+  {{#each @model.product as |product|}}
+    <li><button {{action "toggleActive" product}}>{{product.name}}</button></li>
+  {{/each}}
+  <li>{{@model.countActive}}</li>
+  <li>{{@model.sumActive}}</li>
+</ul>
+<h2>{{plural @model.countActive "Aucun service sélectionné" "service sélectionné" "services sélectionnés"}}</h2>
+{{outlet}}
