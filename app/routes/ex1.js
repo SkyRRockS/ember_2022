@@ -1,3 +1,14 @@
 import Route from '@ember/routing/route';
+import { action, set } from '@ember/object';
 
-export default class Ex1Route extends Route {}
+export default class Ex1Route extends Route {
+  model() {
+    return { item: [] };
+  }
+
+  @action save(content) {
+    let model = this.modelFor(this.routeName);
+    set(model, 'item', content.split('\n'));
+    this.transitionTo('ex1.suite');
+  }
+}
