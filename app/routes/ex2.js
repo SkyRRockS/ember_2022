@@ -11,10 +11,6 @@ export default class Ex2Route extends Route {
 
   @action
   toggleActive(service) {
-    if (service.active) {
-      service.active = false;
-    } else {
-      service.active = true;
-    }
+    set(service,active,!service.active);
   }
 }
