@@ -2,10 +2,10 @@
 
 module.exports = function (environment) {
   let ENV = {
-    modulePrefix: 'ember-2022',
+    modulePrefix: 'tds',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'history',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
